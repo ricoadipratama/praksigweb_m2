@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menampilkan Bilangan Fibonacci</title>
+</head>
+
+<body>
+    <h1>Menampilkan Bilangan Fibonacci</h1>
+    <p>Masukkan angka maksimal: <input type="number" id="inputNumber"></p>
+    <button onclick="generateFibonacci()">Tampilkan Bilangan Fibonacci</button>
+    <p id="result"></p>
+	
+	<script>
+        function generateFibonacci() {
+            var inputNumber = document.getElementById("inputNumber").value;
+            var fibonacciList = [0, 1];
+            
+            while (fibonacciList[fibonacciList.length - 1] + fibonacciList[fibonacciList.length - 2] <= inputNumber) {
+                var nextFibonacci = fibonacciList[fibonacciList.length - 1] + fibonacciList[fibonacciList.length - 2];
+                fibonacciList.push(nextFibonacci);
+				}
+            
+            document.getElementById("result").innerHTML = "Bilangan Fibonacci: " + fibonacciList.join(", ");
+			}
+    </script>
+</body>
+</html>
