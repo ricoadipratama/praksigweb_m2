@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,4 +46,53 @@ function findPrimes() {
 	}
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Numbers</title>
+</head>
+
+<body>
+<h1>Prime Numbers</h1>
+<p>Masukkan angka:</p>
+<input type="number" id="numberInput" placeholder="Masukkan angka...">
+<button onclick="findPrimes()">Cari Bilangan Prima</button>
+<ul id="primesList"></ul>
+
+
+<script>
+function isPrime(number) {
+	if (number <= 1) return false;
+	if (number <= 3) return true;
+	if (number % 2 === 0 || number % 3 === 0) return false;
+  
+	let i = 5;
+	while (i * i <= number) {
+		if (number % i === 0 || number % (i + 2) === 0) return false;
+		i += 6;
+		}
+  
+	return true;
+	}
+
+function findPrimes() {
+	var inputNumber = document.getElementById("numberInput").value;
+	var primesList = document.getElementById("primesList");
+  
+	primesList.innerHTML = ""; // Reset daftar bilangan prima
+  
+	for (let i = 2; i <= inputNumber; i++) {
+		if (isPrime(i)) {
+			var li = document.createElement("li");
+			li.textContent = i;
+			primesList.appendChild(li);
+			}
+		}
+	}
+</script>
+</body>
+>>>>>>> 06af1f1 (Update 1 index)
 </html>

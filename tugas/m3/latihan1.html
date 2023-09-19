@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,3 +35,41 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Faktorial</title>
+</head>
+
+<body>
+    <h1>Hitung faktorial dari input</h1>
+    <h3>Masukkan sembarang angka</h3>
+    <input type="number" id="inputNumber">
+    <button onclick="hitungFaktorial()">Hitung</button>
+    <p id="hasilFaktorial"></p>
+
+    <script>
+        function hitungFaktorial() {
+            // Mendapatkan angka dari input
+            var angka = document.getElementById("inputNumber").value;
+
+            // Memastikan angka adalah bilangan bulat positif
+            if (angka < 0) {
+                alert("Masukkan bilangan bulat positif.");
+                return;
+            }
+
+            // Menghitung faktorial
+            var faktorial = 1;
+            for (var i = 1; i <= angka; i++) {
+                faktorial *= i;
+            }
+
+            // Menampilkan hasil faktorial
+			document.getElementById("hasilFaktorial").textContent = `angka faktorial dari ${angka} adalah : ${faktorial}`;
+        }
+    </script>
+</body>
+</html>
+>>>>>>> 06af1f1 (Update 1 index)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,3 +35,41 @@
 	
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validasi Input</title>
+</head>
+
+<body>
+    <h1> Validasi Input </h1>
+	<p> Masukkan nama, password dan alamat email anda : </p>
+		Nama : <input id="nama" type="text"/><br>
+		Password : <input id="password" type="text"/><br>
+		E-mail : <input id="email" type="email"/><br>
+		<button onclick="klik()">Klik</button><br>
+		<p id="isi"></p>
+	
+	<!-- Script untuk memanggil isi form-->
+	<script>
+		function klik() {
+			var nama, alamat, password;
+			nama = document.getElementById("nama").value;
+			alamat = document.getElementById("email").value;
+			password = document.getElementById("password").value;
+			
+			if (password !=="sss") {
+				alert("password salah");
+				return;
+				}
+			
+			
+			var txt="Hello " + nama +", <br> alamat email anda adalah: " + alamat +
+			"<br> Bagaimana kabarnya hari ini?";
+			document.getElementById("isi").innerHTML=txt;}
+    </script>
+	
+</body>
+</html>
+>>>>>>> 06af1f1 (Update 1 index)
